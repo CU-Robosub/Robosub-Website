@@ -2,8 +2,8 @@ import Image from "next/image";
 
 export default function Nav() {
     return (
-        <div className="w-11/12 h-12 bg-white shadow-xl border border-black
-         rounded-xl z-10 fixed left-1/2 -translate-x-1/2 top-5 flex justify-between">
+        <div className="hidden md:flex w-11/12 h-12 bg-white shadow-xl border border-black
+         rounded-xl z-10 fixed left-1/2 -translate-x-1/2 top-5 justify-between">
             <div className="flex w-72 mx-4 justify-between h-full items-center ">
                 <a className="h-full w-1/4" href="/"><img src="/robosub-logo-1.png"/></a>
                 <div className="hover:text-blue-500 cursor-pointer duration-200"><a href="about">About</a></div>
