@@ -1,11 +1,11 @@
 import Image from "next/image";
-
 export default function Home() {
   return (
     <div className="flex w-full h-full justify-around items-center">
       <div className="w-1/3">
         <h1 className="text-5xl">Autonomous Underwater Vehicles</h1>
-        <p className="text-3xl text-gray-500 my-5">Blah Blah Blah Blah Blah Blah Blah Blah Blah
+        <p className="text-3xl text-gray-500 my-5">
+          Blah Blah Blah Blah Blah Blah Blah Blah Blah
           Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
         </p>
         <div className="flex w-full h-12 justify-around">
