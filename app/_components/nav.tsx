@@ -33,6 +33,7 @@ export default function Nav() {
         { destination: "/about", text: "About" },
         { destination: "/teams", text: "Team" },
         { destination: "/technology", text: "Technology" },
+        {destination: "/sponsors", text: "Sponsors"}
     ];
 
     const socialLinks: SocialLinkProps[] = [
@@ -40,23 +41,18 @@ export default function Nav() {
         { href: "https://www.linkedin.com/company/co-robosub/mycompany/", iconSrc: "/linkedIn-icon.svg", alt: "LinkedIn" },
         { href: "#", iconSrc: "/slack-icon.svg", alt: "Slack" },
     ];
-
     return (
-        <nav className="hidden md:flex w-11/12 h-12 bg-white shadow-xl border border-black z-10 fixed left-1/2 -translate-x-1/2 top-5 justify-between">
-            <div className="flex w-72 mx-4 justify-between h-full items-center">
-                <Link href="/" className="h-full w-1/4">
-                    <Image src="/robosub-logo-1.png" alt="RoboSub Logo" width={72} height={48} />
-                </Link>
+        <nav className="hidden md:flex w-full h-20 z-10 fixed justify-between items-center backdrop-blur-sm">
+            <div className="ml-4 text-4xl font-bold">
+                <NavLink destination="/" text="Colorado Robosub" />
+            </div>
+            <div className="mr-4 flex w-1/3 text-2xl justify-between">
                 {navLinks.map((link, index) => (
                     <NavLink key={index} {...link} />
                 ))}
             </div>
-            <div className="flex items-center justify-between mx-4 w-32">
-                {socialLinks.map((link, index) => (
-                    <SocialLink key={index} {...link} />
-                ))}
-            </div>
         </nav>
     );
+    
 }
 
