@@ -2,15 +2,15 @@
 export default function About() {
     return (
         <>
-            <div>
-                <div className="w-full h-auto relative">
-                    <img className="w-full" src="/About-us-image.jpg" alt="team-picture"></img>
-                    <h1 className="absolute text-center -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 w-full text-[15rem] font-extrabold">About Us</h1>
-                </div>
+
+            <div className="w-full h-auto -z-10 sticky top-0">
+                <img className="w-full" src="/About-us-image.jpg" alt="team-picture"></img>
+                <h1 className="absolute text-center -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 w-full text-[15rem] font-extrabold">About Us</h1>
             </div>
 
+        
             {/*Split this up into its own componenet later*/}
-            <div className="h-1/2 w-full bg-blue-500 border-y-2">
+            <div className="h-1/2 w-full bg-blue-500">
                 <div className="flex w-full justify-between h-full">
                     <div className="w-1/3 flex flex-col items-center my-auto">
                         <div className="text-white text-8xl font-bold">Members</div>
@@ -39,12 +39,13 @@ export default function About() {
                 </p>
                 <div className="h-full">Picture</div>
             </div>
+            <div className="flex items-center justify-center">
+                <div className="w-3/4 my-auto">
+                    <h1 className="text-4xl font-bold text-center">Subteams</h1>
+                    <div className="grid">
 
-            <div className="h-1/2 flex">
-                <div className="w-1/4 h-full border-r-2">Software</div>
-                <div className="w-1/4 h-full border-r-2">Mechanical</div>
-                <div className="w-1/4 h-full border-r-2">Electrical</div>
-                <div className="w-1/4 h-full">Buisness</div>
+                    </div>
+                </div>
             </div>
 
             <div className="border-t-2 h-1/4">
