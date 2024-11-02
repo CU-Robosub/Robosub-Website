@@ -1,18 +1,7 @@
 import Image from "next/image";
 import Link from "next/link";
+import {NavLink, NavLinkProps} from "./navLink";
 
-interface NavLinkProps {
-    destination: string;
-    text: string;
-}
-
-function NavLink({ destination, text }: NavLinkProps) {
-    return (
-        <Link href={destination} className="hover:text-blue-500 cursor-pointer duration-200">
-            {text}
-        </Link>
-    );
-}
 
 interface SocialLinkProps {
     href: string;
@@ -42,7 +31,7 @@ export default function Nav() {
         { href: "#", iconSrc: "/slack-icon.svg", alt: "Slack" },
     ];
     return (
-        <nav className="hidden md:flex w-full h-20 z-10 fixed justify-between items-center backdrop-blur-sm">
+        <nav className="hidden md:flex w-full h-20 z-10 fixed justify-between items-center">
             <div className="ml-4 text-4xl font-bold">
                 <NavLink destination="/" text="Colorado Robosub" />
             </div>

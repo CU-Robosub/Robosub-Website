@@ -1,28 +1,37 @@
 import Image from "next/image";
+
+import Typerwriter from "./_components/typewriter";
+import HomeMenuItem from "./_components/homeMenuItem";
+
 export default function Home() {
   return (
-    <div className="h-full w-full">
-    <div className="fixed w-1/2 h-full bg-blue-500 -z-20 left-0">
-      <div className="fixed w-full h-full bg-[url('/lines.svg')] left-0 bottom-0"></div>
-    </div>
-    <div className="fixed w-1/2 h-full bg-[url('/bg-image.jpg')] bg-[75%_50%] -z-20 right-0"></div>
-    <div className="flex w-full h-full justify-around items-center">
-      <div className="w-1/3">
-        <h1 className="text-5xl">Autonomous Underwater Vehicles</h1>
-        <p className="text-3xl text-white my-5">
-          Blah Blah Blah Blah Blah Blah Blah Blah Blah
-          Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah Blah
-        </p>
-        <div className="flex w-full h-12 justify-around">
-          <div className="w-[47.5%] bottom-0 relative hover:bottom-2 duration-200 cursor-pointer flex flex-col items-center justify-center text-black border border-black">Learn More</div>
-          <div className="w-[47.5%] bottom-0 relative hover:bottom-2 duration-200 cursor-pointer flex flex-col items-center justify-center text-black text-center border border-black">Join</div>
+    <div className="h-full w-full -z-50">
+      <div className="fixed w-3/5 h-full bg-blue-500 -z-20 left-0"></div>
+      <div className="fixed w-2/5 h-full -z-20 right-0"></div>
 
+      <div className="relative top-1/4 ml-10">
+        <h1 className="text-9xl font-bold">Colorado Robosub</h1>
+        <h2 className="text-5xl h-12">
+          <Typerwriter stagger={40}>Autonomous Underwater Vehicles</Typerwriter>
+        </h2>
+        <div className="flex flex-col h-48 justify-between my-20">
+          <HomeMenuItem title={"About Us"} text={" - learn more about our team"}/>
+          <HomeMenuItem title={"Join"} text = {" - join our team of passionate engineers"}/>
+          <HomeMenuItem title={"Contact"} text = {" - contact us for any buisness or personal inquiries"}/>
         </div>
       </div>
-      <div className="w-1/3">
-        <img className="w-full scale-125" src="/robosub-logo-1.png"></img>
+
+    
+
+      <div className="absolute bottom-4 flex w-full h-7 items-center justify-center">
+        <img className="h-full mx-4 relative bottom-0 hover:bottom-2 cursor-pointer duration-200" src="/instagram-icon.svg"></img>
+        <img className="h-full mx-4 relative bottom-0 hover:bottom-2 cursor-pointer duration-200" src="/linkedIn-icon.svg"></img>
+        <img className="h-full mx-4 relative bottom-0 hover:bottom-2 cursor-pointer duration-200" src="/slack-icon.svg"></img>
       </div>
-    </div>
+
+      
+
+
     </div>
   );
 }
