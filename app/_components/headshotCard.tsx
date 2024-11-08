@@ -4,7 +4,7 @@ export default function HeadshotCard({name, image_url, title}: {name: string, im
     return (
         <div className="min-w-96 my-5 h-auto flex flex-col items-center">
             <div className="p-2">
-                <div className="flex relative w-60 h-60 rounded-full overflow-hidden border-4 border-white">
+                <div className="flex relative w-60 h-60 rounded-full overflow-hidden border-4 border-white shadow-2xl">
                     <img
                         src={image_url}
                         alt={`${name}'s headshot`}

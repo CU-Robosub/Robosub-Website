@@ -8,14 +8,23 @@ import HomeMenuItem from "./_components/homeMenuItem";
 
 export default function Home() {
   return (
-    <div className="sm:h-full md:h-full w-full -z-50">
+    <div className="h-full w-full -z-50">
        <motion.div
             initial = {{x:-500}}
             animate = {{x:0}}
             transition={{duration: 0.5}}
             className="fixed w-3/5 h-full bg-blue-500 left-0 -z-10">
       </motion.div>
-
+      <div className="flex flex-row justify-center fixed right-0 h-full w-2/5">
+        <motion.div 
+          className="rotate-6 my-auto"
+          initial = {{opacity: 0}}
+          animate= {{opacity: 1}}
+          transition={{duration: 0.5}}
+        >
+          <Image src="/subs/chimera.png" alt="Chimera" width={500} height={500}></Image>
+        </motion.div>
+      </div>
       <div className="relative top-1/4 ml-10">
         <motion.div
           initial = {{opacity: 0}}
