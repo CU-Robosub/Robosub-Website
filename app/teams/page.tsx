@@ -1,6 +1,7 @@
 import Footer from "../_components/footer";
 import HeadshotCard from "../_components/headshotCard";
 import TeamCard from "../_components/teamCard";
+import { TracingBeam } from "../_components/tracing_beam";
 
 export default function Teams() {
     return (
@@ -20,7 +21,7 @@ export default function Teams() {
                         <HeadshotCard image_url="/headshots/Xavier_OKeefe_Headshot.JPG" name="Xavier O'keefe" title="Lead Systems Engineer" />
                     </div>
                 </div>
-
+                <TracingBeam>
                 <div className="w-full bg-white py-9">
                     <TeamCard title="Software" imgURL="/subteamImgs/softwareImg.jpg">
                     Our Software Team is responsible for taking our subs' sensory input and providing them with the ability to make their own decisions regarding task execution.
@@ -39,6 +40,7 @@ export default function Teams() {
                     Although the Software sub team strives for successful completion of complex tasks, we welcome students of all abilities! No matter whether you are an absolute beginner or an experienced developer, we focus on gradually increasing students' responsibilities and skills involved in the creation of our subs' software in order that the Software sub team is accessible to all!
                     </TeamCard>
                 </div>
+                </TracingBeam>
             </div>
             <Footer/>
         </div>
