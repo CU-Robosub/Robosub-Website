@@ -4,7 +4,14 @@ import { motion } from "framer-motion";
 
 import { useEffect, useRef, useState } from "react";
 
-export default function HomeMenuItem({ title, text, delay }: { title: string; text: string, delay: number }) {
+interface HomeMenuItemProps {
+    title: string;
+    text: string;
+    delay: number;
+    url: string;
+}
+
+export default function HomeMenuItem({ title, text, delay, url }: HomeMenuItemProps) {
     const [desc, setDesc] = useState<string>("");
     const [hover, setHover] = useState<boolean>(false);
     const hoverRef = useRef<boolean>(false);
@@ -44,6 +51,7 @@ export default function HomeMenuItem({ title, text, delay }: { title: string; te
     };
 
     return (
+        <a href={url}>
         <motion.div
             initial={{ opacity: 0, y: 100 }}
             animate={{ opacity: 1, y: 0 }}
@@ -62,5 +70,6 @@ export default function HomeMenuItem({ title, text, delay }: { title: string; te
             </div>
 
         </motion.div>
+        </a>
     );
 }

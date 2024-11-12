@@ -31,7 +31,7 @@ export default function Nav() {
         { href: "#", iconSrc: "/slack-icon.svg", alt: "Slack" },
     ];
     return (
-        <nav className="hidden md:flex w-full h-20 z-10 fixed justify-between items-center">
+        <nav className="hidden md:flex w-full h-20 z-50 fixed justify-between items-center">
             <div className="ml-4 text-4xl font-bold">
                 <NavLink destination="/" text="Colorado Robosub" />
             </div>
