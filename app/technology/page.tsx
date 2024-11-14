@@ -2,7 +2,7 @@
 
 import { useState } from "react";
 import { WavyBackground } from "../_components/wavy_background";
-import Footer from "../_components/footer";
+
 
 
 export default function Technology() {

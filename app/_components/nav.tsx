@@ -1,7 +1,9 @@
+"use client";
+
+import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
-import {NavLink, NavLinkProps} from "./navLink";
-
+import { NavLink, NavLinkProps } from "./navLink";
 
 interface SocialLinkProps {
     href: string;
@@ -18,11 +20,12 @@ function SocialLink({ href, iconSrc, alt }: SocialLinkProps) {
 }
 
 export default function Nav() {
+
     const navLinks: NavLinkProps[] = [
         { destination: "/about", text: "About" },
         { destination: "/teams", text: "Team" },
         { destination: "/technology", text: "Technology" },
-        {destination: "/sponsors", text: "Sponsors"}
+        { destination: "/sponsors", text: "Sponsors" },
     ];
 
     const socialLinks: SocialLinkProps[] = [
@@ -30,8 +33,15 @@ export default function Nav() {
         { href: "https://www.linkedin.com/company/co-robosub/mycompany/", iconSrc: "/linkedIn-icon.svg", alt: "LinkedIn" },
         { href: "#", iconSrc: "/slack-icon.svg", alt: "Slack" },
     ];
+
+    // Determine the background color based on the current URL
+    let backgroundColor = "";
+    if (usePathname() === "/about") {
+        backgroundColor = "bg-blue-500"; // Example background color
+    }
+
     return (
-        <nav className="hidden md:flex w-full h-20 z-50 fixed justify-between items-center">
+        <nav className={`hidden md:flex w-full h-20 z-50 fixed justify-between items-center ${backgroundColor}`}>
             <div className="ml-4 text-4xl font-bold">
                 <NavLink destination="/" text="Colorado Robosub" />
             </div>
@@ -42,6 +52,4 @@ export default function Nav() {
             </div>
         </nav>
     );
-    
 }
-

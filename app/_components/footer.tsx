@@ -10,7 +10,7 @@ export default function Footer() {
                     <img className="h-1/2 mx-4 my-auto relative bottom-0 hover:bottom-2 cursor-pointer duration-200" src="/slack-icon.svg" alt="Slack" />
                 </div>
             </div>
-            <div className="h-20 w-full"></div>
+            <div className="h-20 w-full -z-30"></div>
             
         </>
     )
