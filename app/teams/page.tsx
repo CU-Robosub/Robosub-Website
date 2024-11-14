@@ -22,27 +22,36 @@ export default function Teams() {
                     </div>
                 </div>
                 <TracingBeam>
-                <div className="w-full bg-white py-9">
-                    <TeamCard title="Software" imgURL="/subteamImgs/softwareImg.jpg">
-                    Our Software Team is responsible for taking our subs' sensory input and providing them with the ability to make their own decisions regarding task execution.
-                    Although the Software sub team strives for successful completion of complex tasks, we welcome students of all abilities! No matter whether you are an absolute beginner or an experienced developer, we focus on gradually increasing students' responsibilities and skills involved in the creation of our subs' software in order that the Software sub team is accessible to all!
-                    </TeamCard>
-                    <TeamCard title="Mechanical" imgURL="/subteamImgs/softwareImg.jpg" left={true}>
-                    Our Software Team is responsible for taking our subs' sensory input and providing them with the ability to make their own decisions regarding task execution.
-                    Although the Software sub team strives for successful completion of complex tasks, we welcome students of all abilities! No matter whether you are an absolute beginner or an experienced developer, we focus on gradually increasing students' responsibilities and skills involved in the creation of our subs' software in order that the Software sub team is accessible to all!
-                    </TeamCard>
-                    <TeamCard title="Electrical" imgURL="/subteamImgs/electricalImg.png">
-                    Our Software Team is responsible for taking our subs' sensory input and providing them with the ability to make their own decisions regarding task execution.
-                    Although the Software sub team strives for successful completion of complex tasks, we welcome students of all abilities! No matter whether you are an absolute beginner or an experienced developer, we focus on gradually increasing students' responsibilities and skills involved in the creation of our subs' software in order that the Software sub team is accessible to all!
-                    </TeamCard>
-                    <TeamCard title="Buisness" imgURL="/subteamImgs/buisnessImg.jpg" left={true}>
-                    Our Software Team is responsible for taking our subs' sensory input and providing them with the ability to make their own decisions regarding task execution.
-                    Although the Software sub team strives for successful completion of complex tasks, we welcome students of all abilities! No matter whether you are an absolute beginner or an experienced developer, we focus on gradually increasing students' responsibilities and skills involved in the creation of our subs' software in order that the Software sub team is accessible to all!
-                    </TeamCard>
-                </div>
+                    <div className="w-full bg-white py-9">
+                        <TeamCard title="Software" imgURL="/subteamImgs/softwareImg.jpg">
+                            Our Software Team is responsible for enabling our subs to interpret sensory input and make autonomous decisions for task execution.
+                            While the Software team tackles complex challenges, we welcome students of all experience levels! Whether you’re a beginner or an experienced developer,
+                            we focus on gradually increasing responsibilities and building skills. This approach ensures the Software team is accessible to everyone interested in creating our subs' software.
+                        </TeamCard>
+
+                        <TeamCard title="Mechanical" imgURL="/subteamImgs/softwareImg.jpg" left={true}>
+                            The Mechanical Team at Colorado RoboSub designs, iterates, and integrates all the hardware components for our competition vehicles. This includes
+                            everything from frames and hulls to complex systems like torpedo-firing mechanisms, all aimed at providing students with practical engineering experience.
+                            While we strive for high-level performance and sophisticated solutions, our team is accessible to students of all abilities and commitment levels.
+                            By prioritizing growth and skill development, we ensure there’s a place for anyone eager to contribute and learn on the Colorado RoboSub Mechanical Team.
+                        </TeamCard>
+
+                        <TeamCard title="Electrical" imgURL="/subteamImgs/electricalImg.png">
+                            The Electrical Team designs and manufactures custom electronics boards for both of our submarines. Throughout the school year, we continually refine
+                            past hardware while developing industry skills and emphasizing hands-on learning. Our supportive environment welcomes members of all experience levels,
+                            encouraging them to contribute, learn, and build confidence in their technical abilities.
+                        </TeamCard>
+
+                        <TeamCard title="Business" imgURL="/subteamImgs/buisnessImg.jpg" left={true}>
+                            The Business Team manages administration, public relations, and fundraising, ensuring smooth operations and high visibility for the team. We focus on building
+                            professional relationships with faculty, corporate representatives, and peers, using these connections to secure resources and support for our projects.
+                            By enhancing communication and networking skills, our team plays a vital role in the success of Colorado RoboSub.
+                        </TeamCard>
+                    </div>
+
                 </TracingBeam>
             </div>
-            <Footer/>
+            <Footer />
         </div>
     );
 }

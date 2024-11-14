@@ -1,58 +1,46 @@
 import Image from "next/image";
 import SubteamCards from "../_components/subteamCards";
 import Footer from "../_components/footer";
+import { BackgroundBeams } from "../_components/background_beams";
+import Spin_label from "../_components/spin_label";
+import SpinLabel from "../_components/spin_label";
 
 export default function About() {
     return (
         <>
-
-            <div className="w-full h-auto -z-10 sticky top-0">
-                <img className="w-full" src="/About-us-image.jpg" alt="team-picture"></img>
-                <h1 className="absolute text-center -translate-y-1/2 top-1/2 -translate-x-1/2 left-1/2 w-full text-[15rem] font-extrabold">About Us</h1>
-            </div>
-
-            <div className="flex flex-col items-center h-1/2 w-full pb-10 bg-blue-500 -mt-1"> {/* Adjust margin */}
-                <div className="w-4/5 border-black border-b-2 h-2"></div>
-                <div className="flex w-full flex-wrap justify-between h-full">
-                    <div className="w-1/3 h-4/5 flex flex-col items-center justify-center my-auto">
-                        <div className="text-8xl font-bold">Members</div>
-                        <div className="text-9xl font-bold">20+</div>
-                    </div>
-                    <div className="w-1/3 h-4/5 flex flex-col items-center justify-center my-auto">
-                        <div className="text-8xl font-bold">Founded</div>
-                        <div className="text-9xl font-bold">2020</div>
-                    </div>
-                    <div className="w-1/3 h-4/5 flex flex-col items-center justify-center my-auto">
-                        <div className="text-8xl font-bold">Robots</div>
-                        <div className="text-9xl font-bold">5</div>
-                    </div>
+            <div className="min-h-full w-full text-white bg-neutral-950 relative flex flex-col items-center justify-center antialiased">
+                
+                <h1 className="font-bold text-[15rem] my-0 py-0 z-10">About Us</h1>
+                <div className="flex flex-col md:flex-row justify-evenly items-center w-full flex-wrap">
+                    <SpinLabel title="Founded" label="2020"/>
+                    <SpinLabel title="Members" label="20+"/>
+                    <SpinLabel title="AUVs" label="4"/>
                 </div>
-                <div className="w-4/6 border-black border-b-2 h-2"></div>
+                <BackgroundBeams/>
             </div>
 
 
-            <div className="bg-blue-500 w-full flex p-6">
-                <div className="w-3/6">
-                    <h1 className="text-6xl font-bold py-4">Our Mission</h1>
-                    <p className="text-2xl tracking-wide my-auto">
-                        Colorado RoboSub is a dedicated team of students at the University of Colorado Boulder who compete annually in
-                        the RoboNation RoboSub competition in San Diego, CA. One of the most complex collegiate robotics competitions in
-                        the world, RoboSub requires students to design an autonomous submarine and compete on an international stage!
-                        As a completely student run and administrated club, Colorado RoboSub focuses on developing students abilities
-                        beyond what can be taught in the classroom, building invaluable engineering intuition, and giving students the
-                        opportunity to be a part of community of passionate peers striving towards a common goal!
-                    </p>
-                </div>
-                <div className="w-2/6 flex items-center justify-center mx-auto">
-                    <Image
-                        src="/sub-photo-front.png"
-                        alt="sub_photo"
-                        width={650} // Adjust width and height as needed
-                        height={550}
-                        className="object-cover rounded-lg"
-                    />
+            <div className="w-full h-1/6 bg-gradient-to-t from-blue-500  to-black">
+            </div>
+            <div className=" relative bg-blue-500 p-5 pb-16 flex flex-col">
+                <div className="font-bold text-9xl my-10 z-10">Our Mission.</div>
+                <div className="text-3xl ml-10 w-4/5 leading-relaxed min-w-80 z-10">
+                Colorado RoboSub's mission is to design, build, and program autonomous underwater vehicles (AUVs) to
+                 compete in international competitions. Through this, they aim to develop innovative underwater robotics 
+                 solutions while fostering hands-on learning and collaboration among students passionate about robotics, 
+                 engineering, and software development. The team’s broader goal is to advance underwater 
+                autonomy and engage in educational outreach, inspiring the next generation of engineers and scientists.
                 </div>
             </div>
+            <div className="grid grid-cols-3 gap-4 bg-white p-4">
+                <img className="rounded-md h-4/5" src="/bg-image-3.png"/>
+                <img className="rounded-md col-span-2" src="team-image.jpg"/>
+                <img className="rounded-md row-span-2" src="/sub-photo-front-cropped.png"/>
+                <img className="rounded-md col-span-2 row-span-2" src="/bg-image.jpg"/>
+                
+
+            </div>
+
             <div className="flex flex-col items-center justify-center w-full h-3/4 bg-[url('/flatirons.jpg')] bg-cover">
                 <h1 className="text-6xl font-bold text-center text-white py-6">Subteams</h1>
                 <div className="flex w-full h-3/4">

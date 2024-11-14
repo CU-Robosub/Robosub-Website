@@ -13,6 +13,7 @@ const config: Config = {
   darkMode: "class",
   theme: {
     extend: {
+   
       colors: {
         background: "var(--background)",
         foreground: "var(--foreground)",
@@ -21,6 +22,7 @@ const config: Config = {
         inter: ["Inter", "sans-serif"],
       },
       animation: {
+        spotlight: "spotlight 2s ease .75s 1 forwards",
         aurora: "aurora 60s linear infinite",
       },
       keyframes: {
@@ -30,6 +32,16 @@ const config: Config = {
           },
           to: {
             backgroundPosition: "350% 50%, 350% 50%",
+          },
+        },
+        spotlight: {
+          "0%": {
+            opacity: ')',
+            transform: "translate(-72%, -62%) scale(0.5)",
+          },
+          "100%": {
+            opacity: "1",
+            transform: "translate(-50%,-40%) scale(1)",
           },
         },
       },
