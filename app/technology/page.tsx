@@ -37,22 +37,26 @@ export default function Technology() {
         </>
     );
 }
-
-const subInfo = {
-    "chimera": {
-        img: "/subs/chimera.png",
-        description: "Our newests sub blah blah very cool and new and it will be very cool adn new blah blah"
-    },
-    "lazarus": {
-        img: "/subs/lazarus.png",
-        description: "Our newests sub blah blah very cool and new and it will be very cool adn new blah blah"
-    },
-    "leviathan": {
-        img: "/subs/leviathan.png",
-        description: "Our newests sub blah blah very cool and new and it will be very cool adn new blah blah"
-    },
-    "papa": {
-        img: "/subs/papa.png",
-        description: "Our newests sub blah blah very cool and new and it will be very cool adn new blah blah"
-    },
+interface SubInfo {
+    img: string;
+    description: string;
 }
+
+const subInfo: Record<string, SubInfo> = {
+    chimera: {
+        img: "/subs/chimera.png",
+        description: "Our newest sub blah blah very cool and new and it will be very cool and new blah blah",
+    },
+    lazarus: {
+        img: "/subs/lazarus.png",
+        description: "Our newest sub blah blah very cool and new and it will be very cool and new blah blah",
+    },
+    leviathan: {
+        img: "/subs/leviathan.png",
+        description: "Our newest sub blah blah very cool and new and it will be very cool and new blah blah",
+    },
+    papa: {
+        img: "/subs/papa.png",
+        description: "Our newest sub blah blah very cool and new and it will be very cool and new blah blah",
+    },
+};
