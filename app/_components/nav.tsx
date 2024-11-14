@@ -41,7 +41,7 @@ export default function Nav() {
     }
 
     return (
-        <nav className={`hidden md:flex w-full h-20 z-50 fixed justify-between items-center ${backgroundColor}`}>
+        <nav className={`hidden md:flex w-full h-14 z-50 fixed justify-between items-center ${backgroundColor}`}>
             <div className="ml-4 text-4xl font-bold">
                 <NavLink destination="/" text="Colorado Robosub" />
             </div>
