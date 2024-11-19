@@ -4,6 +4,8 @@ import { usePathname } from "next/navigation";
 import Image from "next/image";
 import Link from "next/link";
 import { NavLink, NavLinkProps } from "./navLink";
+import { useState } from "react";
+import { CallTracker } from "assert";
 
 interface SocialLinkProps {
     href: string;
@@ -20,6 +22,7 @@ function SocialLink({ href, iconSrc, alt }: SocialLinkProps) {
 }
 
 export default function Nav() {
+    const [menu, setMenu] = useState<boolean>(false);
 
     const navLinks: NavLinkProps[] = [
         { destination: "/about", text: "About" },
@@ -41,15 +44,30 @@ export default function Nav() {
     }
 
     return (
-        <nav className={`hidden md:flex w-full h-14 z-50 fixed justify-between items-center ${backgroundColor}`}>
-            <div className="ml-4 text-4xl font-bold">
-                <NavLink destination="/" text="Colorado Robosub" />
-            </div>
-            <div className="mr-4 flex w-1/3 text-2xl justify-between">
-                {navLinks.map((link, index) => (
-                    <NavLink key={index} {...link} />
-                ))}
-            </div>
-        </nav>
+        <>
+            <nav className={`hidden md:flex w-full h-14 z-50 fixed justify-between items-center ${backgroundColor}`}>
+                <div className="ml-4 text-4xl font-bold">
+                    <NavLink destination="/" text="Colorado Robosub" />
+                </div>
+                <div className="mr-4 flex w-1/3 text-2xl justify-between">
+                    {navLinks.map((link, index) => (
+                        <NavLink key={index} {...link} />
+                    ))}
+                </div>
+            </nav>
+
+            <nav className="hidden fixed top-0 left-0 z-50 flex-col h-full w-full">
+                <Image onClick={() => setMenu(!menu)} src="/svg/hamburger.svg" width={50} height={50} alt="Hamburger_icon" className={`${menu ? "rotate-90" : ""} duration-200`}/>
+                <div className={`${menu ? "translate-x-0" : "-translate-x-full"} duration-200 h-full bg-neutral-800 w-1/2`}>
+                <div className={`ml-2 duration-200 flex flex-col text-3xl h-72 items-start text-white top-0 justify-evenly fixed`}>
+                        {navLinks.map((link, index) => (
+                            <NavLink key={index} {...link} />
+                        ))}
+                </div>
+                </div>
+                
+
+            </nav>
+        </>
     );
 }

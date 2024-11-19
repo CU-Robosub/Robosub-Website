@@ -2,12 +2,13 @@
 
 import React, { Children } from "react";
 import {motion} from "framer-motion";
+import Image from "next/image";
 
 
 
 interface TeamCardProps {
     title: string;
-    imgURL?: string;
+    imgURL: string;
     left?: boolean;
     children?: string; 
 }
@@ -15,7 +16,7 @@ interface TeamCardProps {
 export default function TeamCard({ title, imgURL, left, children }: TeamCardProps) {
     return (
         <div className="w-4/5 mx-auto pt-10 flex flex-wrap">
-            {left && <img className="w-full md:w-3/5 lg:w-2/5 mr-auto shadow-lg" src={imgURL} alt="software_img"></img> }
+            {left && <Image className="w-3/5 hidden md:block lg:w-2/5 mx-auto lg:mr-auto shadow-lg" width={500} height={500} alt="team_image" src={imgURL}/> }
             <div className="w-full lg:w-1/2">
                 <motion.div
                     initial = {{opacity: 0}}
@@ -36,8 +37,8 @@ export default function TeamCard({ title, imgURL, left, children }: TeamCardProp
                 </p>
                 </motion.div>
             </div>
-            {!left && <img className="w-full md:w-3/5 lg:w-2/5 ml-auto shadow-lg" src={imgURL} alt="software_img"></img>  }
-                   
+            {!left && <Image className="w-3/5 lg:w-2/5 ml-auto mx-auto shadow-lg" width={500} height={500} alt="team_image" src={imgURL}/>  }
+            {left && <Image className="w-3/5 block md:hidden mx-auto lg:w-2/5 ml-auto shadow-lg" width={500} height={500} alt="team_image" src={imgURL}/>}
         </div>
     );
 }
