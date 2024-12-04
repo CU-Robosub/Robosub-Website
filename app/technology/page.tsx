@@ -3,6 +3,9 @@
 import { useState } from "react";
 import { WavyBackground } from "../_components/wavy_background";
 import StatItem from "../_components/stat_item";
+import {motion} from 'framer-motion';
+import SlidingText from "../_components/technology_page/SlidingText";
+import Footer from "../_components/footer";
 
 interface SubInfo {
     img: string;
@@ -54,10 +57,14 @@ export default function Technology() {
     ];
 
     return (
-        <div className="-z-10 bg-blue-50 w-full">
+        <>
+            <div className="fixed h-full w-full blur-md scale-105">
+                <SlidingText/>
+                <div className="z-10 fixed bottom-0 w-full h-1/2 bg-blue-500 text-9xl"></div>
+            </div>
             <WavyBackground backgroundFill="white" className="w-full min-h-screen">
                 {/* Submarine Selector */}
-                <div className="overflow-hidden text-lg md:text-3xl relative top-12 md:top-24 w-4/5 md:w-2/5 h-auto flex flex-wrap md:flex-nowrap rounded-full border-2 justify-around items-center mx-auto border-black">
+                <div className="shadow-md overflow-hidden text-lg bg-white md:text-3xl relative top-12 md:top-24 w-4/5 md:w-2/5 h-auto flex flex-wrap md:flex-nowrap rounded-full border-2 justify-around items-center mx-auto border-black">
                     {["chimera", "lazarus", "papa", "leviathan"].map((sub) => (
                         <div
                             key={sub}
@@ -102,6 +109,6 @@ export default function Technology() {
                     />
                 </div>
             </WavyBackground>
-        </div>
+        </>
     );
 }

@@ -58,7 +58,7 @@ export default function HomeMenuItem({ title, text, delay, url }: HomeMenuItemPr
             transition={{ duration: 0.5, delay }}
 
         >
-            <div className="text-2xl flex flex-row items-center">
+            <div className="text-2xl flex flex-row mx-0 items-center">
                 <span
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
@@ -66,7 +66,7 @@ export default function HomeMenuItem({ title, text, delay, url }: HomeMenuItemPr
                 >
                     {title}
                 </span>
-                <span className="ml-2">{desc}</span>
+                <span className="hidden md:block ml-2">{desc}</span>
             </div>
 
         </motion.div>

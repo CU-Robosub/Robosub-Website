@@ -3,13 +3,19 @@ import Footer from "../_components/footer";
 import HeadshotCard from "../_components/headshotCard";
 import TeamCard from "../_components/teamCard";
 import { TracingBeam } from "../_components/tracing_beam";
+import { Metadata } from "next";
+export const metadata: Metadata = {
+
+    title: 'Our Team',
+    description: "Meet the team of passionate engineers that make Colorado Robosub possible",
+}
 
 export default function Teams() {
     return (
         <div>
             
             <div className="w-full bg-blue-500">
-                <div>
+                <div className="">
                     <h1 className="text-center text-6xl md:text-9xl font-bold py-9">Team Leads</h1>
                     <div className="flex flex-wrap flex-column w-full lg:w-4/5 mx-auto justify-evenly">
                         <HeadshotCard image_url="/headshots/William_Hardee_headshot.jpg" name="William Hardee" title="Lead Software Developer" />

@@ -40,7 +40,7 @@ export default function Nav() {
     // Determine the background color based on the current URL
     let backgroundColor = "";
     if (usePathname() === "/about") {
-        backgroundColor = "bg-blue-500"; // Example background color
+        backgroundColor = ""; // Example background color
     }
 
     return (
@@ -49,25 +49,26 @@ export default function Nav() {
                 <div className="ml-4 text-4xl font-bold">
                     <NavLink destination="/" text="Colorado Robosub" />
                 </div>
-                <div className="mr-4 flex w-1/3 text-2xl justify-between">
+                <div className="mr-4 flex w-1/3 min-w-[400px] text-2xl justify-between">
                     {navLinks.map((link, index) => (
                         <NavLink key={index} {...link} />
                     ))}
                 </div>
             </nav>
 
-            <nav className="hidden fixed top-0 left-0 z-50 flex-col h-full w-full">
-                <Image onClick={() => setMenu(!menu)} src="/svg/hamburger.svg" width={50} height={50} alt="Hamburger_icon" className={`${menu ? "rotate-90" : ""} duration-200`}/>
-                <div className={`${menu ? "translate-x-0" : "-translate-x-full"} duration-200 h-full bg-neutral-800 w-1/2`}>
-                <div className={`ml-2 duration-200 flex flex-col text-3xl h-72 items-start text-white top-0 justify-evenly fixed`}>
+            <nav className="block md:hidden fixed top-0 left-0 z-50">
+                <Image onClick={() => setMenu(!menu)} src="/svg/hamburger.svg" width={40} height={40} alt="Hamburger_icon" className={`${menu ? "rotate-90" : ""} duration-200 bg-white rounded-full shadow-xl fixed top-1 left-1`} />
+
+            </nav>
+            {menu &&
+                <div onClick={() => setMenu(false)} className="z-40 fixed backdrop-blur-sm duration-200 w-full h-full">
+                    <div onClick={() => setMenu(false)} className="text-2xl flex flex-col w-1/2 h-1/2 bg-white mx-auto mt-24 rounded-2xl shadow-2xl">
                         {navLinks.map((link, index) => (
                             <NavLink key={index} {...link} />
                         ))}
+                    </div>
                 </div>
-                </div>
-                
-
-            </nav>
+            }
         </>
     );
 }

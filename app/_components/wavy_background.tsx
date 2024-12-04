@@ -66,7 +66,7 @@ export const WavyBackground = ({
     "#3b82f6",
     "#3b82f6",
     "#3b82f6",
-    "#22d3ee",
+    "#3b82f6",
   ];
   const drawWave = (n: number) => {
     nt += getSpeed();
@@ -85,9 +85,10 @@ export const WavyBackground = ({
 
   let animationId: number;
   const render = () => {
-    ctx.fillStyle = backgroundFill || "black";
+    ctx.clearRect(0, 0, w, h); // Clear the canvas
+    ctx.fillStyle = "rgba(0, 0, 0, 0)"; // Transparent background
     ctx.globalAlpha = waveOpacity || 0.5;
-    ctx.fillRect(0, 0, w, h);
+    ctx.fillRect(0, 0, w, h); // Fill the canvas with the transparent color
     drawWave(5);
     animationId = requestAnimationFrame(render);
   };
