@@ -17,7 +17,7 @@ export const AuroraBackground = ({
     <main>
       <div
         className={cn(
-          "relative flex flex-col h-[100vh] items-center justify-center bg-blue-50 dark:bg-blue-900 text-slate-950 transition-bg",
+          "relative h-[100vh] bg-blue-50 dark:bg-blue-900 text-slate-950 transition-bg",
           className
         )}
         {...props}
@@ -25,10 +25,10 @@ export const AuroraBackground = ({
         <div className="absolute inset-0 overflow-hidden">
           <div
             className={cn(
-              `
-              [--white-gradient:repeating-linear-gradient(100deg,var(--blue-200)_0%,var(--blue-200)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--blue-200)_16%)]
-              [--dark-gradient:repeating-linear-gradient(100deg,var(--blue-800)_0%,var(--blue-800)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--blue-800)_16%)]
-              [--aurora:repeating-linear-gradient(100deg,var(--blue-500)_10%,var(--blue-400)_15%,var(--blue-300)_20%,var(--blue-200)_25%,var(--blue-600)_30%)]
+              `-scale-x-100
+              [--white-gradient:repeating-linear-gradient(-80deg,var(--blue-200)_0%,var(--blue-200)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--blue-200)_16%)]
+              [--dark-gradient:repeating-linear-gradient(-80deg,var(--blue-800)_0%,var(--blue-800)_7%,var(--transparent)_10%,var(--transparent)_12%,var(--blue-800)_16%)]
+              [--aurora:repeating-linear-gradient(-80deg,var(--blue-500)_10%,var(--blue-400)_15%,var(--blue-300)_20%,var(--blue-200)_25%,var(--blue-600)_30%)]
               [background-image:var(--white-gradient),var(--aurora)]
               dark:[background-image:var(--dark-gradient),var(--aurora)]
               [background-size:300%,_200%]

@@ -20,48 +20,42 @@ export default function Home() {
     return (
         <>
             <AuroraBackground>
-                <div className="h-full w-full">
-                    {/* Left Side Background */}
-                    <SlidingBackground/>
+               <div className="relative grid grid-cols-2 grid-rows-1 h-full w-full">
+                    <div className="relative w-full h-full">
+                        <div className="absolute inset-8 grid grid-rows-4 items-center">
+                            <h1 className="text-8xl font-bold text-center row-span-1">
+                                <span className="text-yellow-600">Colorado</span> Robosub
+                            </h1>
+                            <div className="text-center row-span-1 text-5xl">
+                                Autonomous Underwater Vehicles
+                            </div>
+                            <div className="relative row-span-2 w-full h-full flex flex-col justify-center">
+                                <div className="bg-slate-100 relative p-2 grid grid-rows-3 rounded-lg h-4/5 w-3/5 mx-auto shadow-lg border-black border-solid">
+                                    <div className="cursor-pointer relative bottom-0 hover:bottom-1 duration-150 w-5/6 h-3/4 mx-auto bg-blue-500 m-1 rounded-md text-center flex flex-col justify-center text-3xl shadow-md">About Us</div>
+                                    <div className="cursor-pointer relative bottom-0 hover:bottom-1 duration-150 w-5/6 h-3/4 mx-auto bg-blue-500 m-1 rounded-md text-center flex flex-col justify-center text-3xl shadow-md">Join</div>
+                                    <div className="cursor-pointer relative bottom-0 hover:bottom-1 duration-150 w-5/6 h-3/4 mx-auto bg-blue-500 m-1 rounded-md text-center flex flex-col justify-center text-3xl shadow-md">Contact</div>
+                                </div>
 
-                    {/* Right Side Image */}
-                    <div className="hidden md:flex flex-row justify-center fixed right-0 h-full w-2/5">
-                        <ImagePopup/>
-                    </div>
+                                <Image src="/svg/down_arrow.svg" width={50} height={50} alt="arrow" className="relative cursor-pointer rounded-full shadow-lg mx-auto mt-6 top-0 hover:top-1 duration-150"/>
+                       
+                            </div>
 
-                    {/* Main Content */}
-                    <div className="relative top-10 md:top-1/4 ml-6 md:ml-10 text-center md:text-left">
-                        {/* Title Section */}
-                        <HomeTitle/>
-                        <h2 className="text-2xl sm:text-3xl md:text-5xl h-12">
-                            <Typerwriter stagger={40}>Autonomous Underwater Vehicles</Typerwriter>
-                        </h2>
-
-                        {/* Menu Items */}
-                        <div className="flex ml-auto flex-col space-y-6 sm:space-y-8 my-10 md:mx-0 md:my-20">
-                            <HomeMenuItem
-                                title={"About Us"}
-                                text={" - learn more about our team"}
-                                delay={0}
-                                url="/about"
-                            />
-                            <HomeMenuItem
-                                title={"Join"}
-                                text={" - join our team of passionate engineers"}
-                                delay={0.33}
-                                url="/about"
-                            />
-                            <HomeMenuItem
-                                title={"Contact"}
-                                text={" - contact us for any business or personal inquiries"}
-                                delay={0.66}
-                                url="/about"
-                            />
                         </div>
                     </div>
+                    <div className="relative w-full h-full">
+                        <div className="shadow-lg absolute inset-8 bg-slate-100 rounded-lg overflow-hidden">
+                        <Image
+                            src="/bg-image.jpg"
+                            alt="bg_image"
+                            fill
+                            className="object-cover" // Add this line
+                        />
+                        </div>
+                    </div>
+               </div>
+               <div className="h-4/5">
 
-                   
-                </div>
+               </div>
             </AuroraBackground>
         </>
     );
