@@ -4,6 +4,7 @@ import HeadshotCard from "../_components/headshotCard";
 import TeamCard from "../_components/teamCard";
 import { TracingBeam } from "../_components/tracing_beam";
 import { Metadata } from "next";
+
 export const metadata: Metadata = {
 
     title: 'Our Team',

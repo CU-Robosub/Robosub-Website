@@ -15,7 +15,7 @@ interface TeamCardProps {
 
 export default function TeamCard({ title, imgURL, left, children }: TeamCardProps) {
     return (
-        <div className="w-4/5 mx-auto pt-10 flex flex-wrap">
+        <div id={title} className="w-4/5 mx-auto pt-10 flex flex-wrap">
             {left && <Image className="w-3/5 hidden md:block lg:w-2/5 mx-auto lg:mr-auto shadow-lg" width={500} height={500} alt="team_image" src={imgURL}/> }
             <div className="w-full lg:w-1/2">
                 <motion.div

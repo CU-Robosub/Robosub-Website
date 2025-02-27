@@ -20,14 +20,14 @@ export default function Home() {
     return (
         <>
             <AuroraBackground>
-               <div className="relative grid grid-cols-2 grid-rows-1 h-full w-full">
+               <div className="z-20 relative grid grid-cols-2 grid-rows-1 h-full w-full">
                     <div className="relative w-full h-full">
                         <div className="absolute inset-8 grid grid-rows-4 items-center">
                             <h1 className="text-8xl font-bold text-center row-span-1">
                                 <span className="text-yellow-600">Colorado</span> Robosub
                             </h1>
-                            <div className="text-center row-span-1 text-5xl">
-                                Autonomous Underwater Vehicles
+                            <div className="text-center row-span-1 text-5xl w-4/5 mx-auto">
+                                <Typerwriter stagger={50}>Autonomous Underwater Vechicles</Typerwriter>
                             </div>
                             <div className="relative row-span-2 w-full h-full flex flex-col justify-center">
                                 <div className="bg-slate-100 relative p-2 grid grid-rows-3 rounded-lg h-4/5 w-3/5 mx-auto shadow-lg border-black border-solid">
@@ -36,7 +36,7 @@ export default function Home() {
                                     <div className="cursor-pointer relative bottom-0 hover:bottom-1 duration-150 w-5/6 h-3/4 mx-auto bg-blue-500 m-1 rounded-md text-center flex flex-col justify-center text-3xl shadow-md">Contact</div>
                                 </div>
 
-                                <Image src="/svg/down_arrow.svg" width={50} height={50} alt="arrow" className="relative cursor-pointer rounded-full shadow-lg mx-auto mt-6 top-0 hover:top-1 duration-150"/>
+                                <Image src="/svg/down_arrow.svg" width={50} height={50} alt="arrow" className="relative cursor-pointer rounded-full shadow-lg mx-auto mt-6 top-0 hover:top-1 duration-150 bg-white"/>
                        
                             </div>
 
@@ -53,9 +53,15 @@ export default function Home() {
                         </div>
                     </div>
                </div>
+               <div className="absolute bottom-0 w-full h-full">
+                        <Image src="/svg/wave1.svg" width={50} height={50} className="z-10 absolute bottom-0 scale-y-75 w-full block overflow-auto translate-y-[14%]" alt="wave_image"></Image>
+                        <Image src="/svg/wave2.svg" width={50} height={50} className="absolute bottom-0 scale-y-75 w-full block overflow-auto translate-y-[14%]" alt="wave_image"></Image>
+                        <Image src="/svg/wave3.svg" width={50} height={50} className="absolute bottom-0 scale-y-75 w-full block overflow-auto translate-y-[14%]" alt="wave_image"></Image>
+                </div>
                <div className="h-4/5">
 
                </div>
+               
             </AuroraBackground>
         </>
     );
