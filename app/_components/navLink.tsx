@@ -1,24 +1,25 @@
 'use client';
 
 import Link from "next/link";
-import { useState } from "react";
+import { ReactNode, useState } from "react";
 
 export interface NavLinkProps {
-    destination: string;
-    text: string;
+    href: string;
+    className?: string;
+    children: ReactNode;
+    borderColor?: string; // Optional prop for border color
 }
 
-export function NavLink({ destination, text }: NavLinkProps) {
+export function NavLink({ href, className, children, borderColor = "border-black" }: NavLinkProps) {
     const [hover, setHover] = useState<boolean>(false);
     return (
-        <Link href={destination} className="cursor-pointer relative" 
+        <Link href={href} className={`relative flex flex-row items-center ${className}`}
             onMouseEnter={() => setHover(true)}
             onMouseLeave={() => setHover(false)}>
-            <span>{text}</span>
-            <div className={`absolute top-0 h-full duration-300 border-b-2 border-solid border-black ease-out
+            <span>{children}</span>
+            <div className={`absolute top-0 h-full duration-300 border-b-2 border-solid ${borderColor} ease-out
                 ${hover ? 'w-full' : 'w-0'}`
             }></div>
-            
         </Link>
     );
 }

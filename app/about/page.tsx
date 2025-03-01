@@ -92,7 +92,7 @@ export default function About() {
                                 <Popup>The competition.</Popup>
                             </span>
                             
-                            <iframe className="pl-6" width="672" height="378" src="https://www.youtube.com/embed/zGQymhIOxDs?si=29B85oOrWjK-1_2r" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+                            <iframe className="pl-6" width="672" height="378" src="https://www.youtube.com/embed/zGQymhIOxDs?si=29B85oOrWjK-1_2r" title="YouTube video player" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowFullScreen></iframe>
                         </div>
                 </div>
                 
