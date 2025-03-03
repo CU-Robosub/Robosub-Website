@@ -45,7 +45,7 @@ export default function SpinLabel({ title, label }: SpinLabelProps) {
         <div ref={ref} className="relative flex flex-col">
             <div className="text-3xl font-bold z-10">{title}</div>
             <div
-                className="text-9xl font-bold z-10"
+                className="text-4xl sm:text-5xl md:text-9xl font-bold z-10"
                 style={{ minWidth, fontFamily: "monospace" }} // Monospaced font for consistent width
             >
                 {trueLabel}
