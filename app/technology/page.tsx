@@ -39,13 +39,6 @@ const subInfo: Record<string, SubInfo> = {
         hours: 2700,
         weight: 20,
     },
-    papa: {
-        img: "/subs/papa.png",
-        description: "Our newest sub with 8 motors to allow for thrust vectoring and superior mobility. The modular design makes it easy to swap components in and out. Multidimensional gripper to allow for complex manipulation of objects",
-        cost: 16500,
-        hours: 2700,
-        weight: 20,
-    },
 };
 
 export default function Technology() {
@@ -64,7 +57,7 @@ export default function Technology() {
 
                     <div className="flex flex-col w-full mx-auto py-20 px-20 items-center justify-around relative ">
                         <div className="shadow-md overflow-hidden text-lg md:text-3xl   flex flex-wrap md:flex-nowrap rounded-full border-2 justify-around items-center border-black dark:border-white">
-                            {["chimera", "lazarus", "papa", "leviathan"].map((sub) => (
+                            {["chimera", "lazarus", "leviathan"].map((sub) => (
                                 <div
                                     key={sub}
                                     onClick={() => setSelectedSub(sub)}

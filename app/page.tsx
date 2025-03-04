@@ -38,8 +38,13 @@ export default function Home() {
                             <Typerwriter stagger={40}>Autonomous Underwater Vehicles</Typerwriter>
                         </h2>
 
+                        <div className="md:hidden flex justify-center items-center my-4">
+                        <ImagePopup />
+
+                        </div>
+
                         {/* Menu Items */}
-                        <div className="flex ml-auto flex-col space-y-6 sm:space-y-8 my-10 md:mx-0 md:my-20">
+                        <div className="flex w-full items-center md:items-start md:w-auto md:ml-auto flex-col space-y-6 sm:space-y-8 my-10 md:mx-0 md:my-20">
                             <HomeMenuItem
                                 title={"About Us"}
                                 text={" - learn more about our team"}
