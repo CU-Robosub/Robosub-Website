@@ -60,10 +60,10 @@ export default function Technology() {
     return (
         <>
             <div className="relative w-full h-full grid grid-rows-10 grid-cols-10">
-                <div className="col-span-5 row-span-10 bg-gradient-to-b from-blue-500 via-blue-600 to-blue-700">
+                <div className="col-span-5 row-span-10 bg-gradient-to-b from-blue-500 via-blue-600 to-blue-700 dark:from-blue-700 dark:via-blue-800 dark:to-blue-900">
 
                     <div className="flex flex-col w-full mx-auto py-20 px-20 items-center justify-around relative ">
-                        <div className="shadow-md overflow-hidden text-lg md:text-3xl   flex flex-wrap md:flex-nowrap rounded-full border-2 justify-around items-center border-black">
+                        <div className="shadow-md overflow-hidden text-lg md:text-3xl   flex flex-wrap md:flex-nowrap rounded-full border-2 justify-around items-center border-black dark:border-white">
                             {["chimera", "lazarus", "papa", "leviathan"].map((sub) => (
                                 <div
                                     key={sub}
@@ -77,7 +77,7 @@ export default function Technology() {
 
                         {/* Text Section */}
                         <div className="flex flex-col w-full h-auto md:h-full mb-8 md:mb-0">
-                            <div className="shadow-lg bg-blue-600 p-3 m-3 mt-6 h-[20rem]">
+                            <div className="shadow-lg bg-blue-600 dark:bg-blue-800 p-3 m-3 mt-6 h-[20rem]">
                                 <div className="text-3xl font-bold">Description.</div>
                                 <p className="text-lg md:text-2xl my-3 text-center md:text-left">
                                     {subInfo[selectedSub].description}
@@ -97,7 +97,7 @@ export default function Technology() {
                         </div>
                     </div>
                 </div>
-                <div className="rounded-lg relative col-span-5 bg-slate-50 row-span-8 col-start-6 row-start-2 shadow-lg m-10 overflow-hidden flex flex-col justify-center items-center">
+                <div className="rounded-lg relative col-span-5 bg-slate-50 dark:bg-gray-800 row-span-8 col-start-6 row-start-2 shadow-lg m-10 overflow-hidden flex flex-col justify-center items-center">
                     <Image className="z-10" src={`${subInfo[selectedSub].img}`} width={450} height={450} alt={`${selectedSub}`} />
                     <div className="absolute top-1 left-1 text-5xl font-semibold">{selectedSub.toUpperCase()}</div>
                     <div className="absolute w-full h-full top-0 left-0 overflow-hidden flex flex-col justify-center items-center"><WavyBackground/></div>

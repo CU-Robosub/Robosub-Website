@@ -26,10 +26,10 @@ export default function About() {
                     <SpinLabel title="Members" label="20+" />
                     <SpinLabel title="AUVs" label="4" />
                 </div>
-                <BackgroundBeams className="bg-white" />
+                <BackgroundBeams className="bg-white dark:bg-gray-900" />
             </div>
 
-            <div className="md:top-[30rem] top-[19rem] text-black w-full relative overflow-hidden">
+            <div className="md:top-[30rem] top-[19rem] w-full text-black relative overflow-hidden">
                 <div className="relative top-0">
                     <Image src="/svg/wave1.svg" width={50} height={50} className="scale-y-75 w-full block overflow-auto translate-y-[14%]" alt="wave_image"></Image>
                     <Image src="/svg/wave2.svg" width={50} height={50} className="-z-10 absolute scale-y-75 w-full block overflow-auto -translate-y-[86%]" alt="wave_image"></Image>

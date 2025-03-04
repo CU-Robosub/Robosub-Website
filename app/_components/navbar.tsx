@@ -10,6 +10,8 @@ import { cn } from "@/lib/utils";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NavLink } from "./navLink";
+import Image from "next/image";
+
 
  
 export const Navbar = () => {
@@ -28,6 +30,10 @@ export const Navbar = () => {
       setVisible(false);
     }
   }, [pathname]);
+
+  function themeChange() {
+    document.documentElement.classList.toggle('dark')
+  }
 
  
   useMotionValueEvent(scrollYProgress, "change", (current) => {
@@ -65,20 +71,24 @@ export const Navbar = () => {
         className={cn(
           "hidden md:flex w-full fixed top-0 inset-x-0 mx-auto pr-2 pl-8 py-2 z-50 align-middle",
           {
-            "bg-slate-50 shadow-md": bgcolor
+            "bg-slate-50 dark:bg-gray-900 shadow-md": bgcolor
                       }
   
         )}
       >
         
         <NavLink href="/" className="mr-auto text-3xl font-semibold">Colorado Robosub</NavLink>
-        <div className="text-lg flex flex-row  md:w-1/2 lg:w-1/3 justify-around font-semibold">
+        <div className="text-lg flex flex-row  md:w-1/2 lg:w-2/5 justify-around font-semibold">
             <NavLink href="/about">About</NavLink>
             <NavLink href="/technology">Technology</NavLink>
             <NavLink href="/teams">Subteams</NavLink>
             <NavLink href="/sponsors">Sponsors</NavLink>
-            <div className="flex-row items-center cursor-pointer py-1 px-4 bg-blue-500 hover:bg-blue-400 duration-150 rounded-xl">
+            <div className="flex-row items-center cursor-pointer py-1 px-4 bg-blue-500 dark:bg-blue-900 hover:bg-blue-400 duration-150 rounded-xl">
                 Join
+            </div>
+            <div onClick={themeChange} className="flex-row items-center cursor-pointer py-1 px-2 dark:bg-yellow-500 dark:hover:bg-yellow-600 bg-blue-800  hover:bg-blue-950 duration-150 rounded-xl">
+              <Image className="hidden dark:block" src="/svg/sun.svg" width={25} height={25} alt="sun"/>
+              <Image className="dark:hidden" src="/svg/moon.svg" width={25} height={25} alt="sun"/>
             </div>
         </div>
 

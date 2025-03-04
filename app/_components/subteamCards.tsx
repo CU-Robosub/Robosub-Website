@@ -5,7 +5,7 @@ import Link from "next/link";
 export default function SubteamCards({ title, description, svg }: { title: string, description: string, svg: string }) {
     return (
         <Popup>
-            <div className="relative flex flex-col justify-evenly items-center shadow-md rounded-xl border-2 border-blue-400 bg-slate-100 col-span-1 row-span-1 w-full h-full p-4 sm:p-6">
+            <div className="relative flex flex-col justify-evenly items-center shadow-md rounded-xl border-2 border-blue-400 dark:border-gray-900 bg-slate-100 dark:bg-gray-800 dark:text-white col-span-1 row-span-1 w-full h-full p-4 sm:p-6">
                 <div className="font-bold text-xl sm:text-2xl md:text-3xl lg:text-4xl text-center">
                     {title}
                 </div>
@@ -26,7 +26,7 @@ export default function SubteamCards({ title, description, svg }: { title: strin
 
                 <Link
                     href={`/teams#${title}`}
-                    className="bg-blue-500 cursor-pointer hover:bg-blue-600 duration-150 rounded-lg shadow-md text-lg sm:text-xl md:text-2xl py-2 px-5 sm:py-3 sm:px-7 text-white text-center"
+                    className="bg-blue-500 dark:bg-blue-900 dark:hover:bg-blue-950 cursor-pointer hover:bg-blue-600 duration-150 rounded-lg shadow-md text-lg sm:text-xl md:text-2xl py-2 px-5 sm:py-3 sm:px-7 text-white text-center"
                 >
                     Learn more
                 </Link>

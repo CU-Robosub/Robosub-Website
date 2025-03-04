@@ -20,7 +20,7 @@ export default function Home() {
     return (
 
         <>
-            <AuroraBackground>
+    
                 <div className="h-full w-full">
                     {/* Left Side Background */}
                     <SlidingBackground />
@@ -63,7 +63,7 @@ export default function Home() {
 
 
                 </div>
-            </AuroraBackground>
+
         </>
 
     );

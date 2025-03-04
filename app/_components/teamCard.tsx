@@ -15,7 +15,7 @@ interface TeamCardProps {
 
 export default function TeamCard({ title, imgURL, left, children }: TeamCardProps) {
     return (
-        <div id={title} className="w-4/5 mx-auto pt-10 flex flex-wrap shadow-lg p-4 my-10">
+        <div id={title} className="w-4/5 mx-auto pt-10 flex flex-wrap shadow-lg p-4 my-10 dark:bg-gray-800 rounded-md">
             {left && <Image className="rounded-lg overflow-hidden w-3/5 hidden md:block lg:w-2/5 mx-auto lg:mr-auto shadow-lg" width={450} height={450} alt="team_image" src={imgURL}/> }
             <div className="w-full lg:w-1/2">
                 <motion.div
@@ -24,7 +24,7 @@ export default function TeamCard({ title, imgURL, left, children }: TeamCardProp
                     transition={{duration: 0.5}}
                     viewport={{once: true}}
                 >
-                    <h1 className="text-3xl md:text-6xl inline border-black border-b-2">{title}</h1>
+                    <h1 className="text-3xl md:text-6xl inline border-black dark:border-white border-b-2">{title}</h1>
                 </motion.div>
                 <motion.div
                     initial = {{opacity: 0, y: 50}}

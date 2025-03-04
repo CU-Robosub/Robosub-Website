@@ -10,7 +10,7 @@ export interface NavLinkProps {
     borderColor?: string; // Optional prop for border color
 }
 
-export function NavLink({ href, className, children, borderColor = "border-black" }: NavLinkProps) {
+export function NavLink({ href, className, children, borderColor = "border-black dark:border-white" }: NavLinkProps) {
     const [hover, setHover] = useState<boolean>(false);
     return (
         <Link href={href} className={`relative flex flex-row items-center ${className}`}
