@@ -28,16 +28,16 @@ const subInfo: Record<string, SubInfo> = {
     lazarus: {
         img: "/subs/lazarus.png",
         description: "Our newest sub with 8 motors to allow for thrust vectoring and superior mobility. The modular design makes it easy to swap components in and out. Multidimensional gripper to allow for complex manipulation of objects",
-        cost: 16500,
-        hours: 2700,
-        weight: 20,
+        cost: 12300,
+        hours: 2220,
+        weight: 30,
     },
     leviathan: {
         img: "/subs/leviathan.png",
         description: "Our newest sub with 8 motors to allow for thrust vectoring and superior mobility. The modular design makes it easy to swap components in and out. Multidimensional gripper to allow for complex manipulation of objects",
-        cost: 16500,
-        hours: 2700,
-        weight: 20,
+        cost: 12700,
+        hours: 1200,
+        weight: 15,
     },
 };
 
@@ -70,22 +70,25 @@ export default function Technology() {
 
                         {/* Text Section */}
                         <div className="flex flex-col w-full h-auto md:h-full mb-8 md:mb-0">
-                            <div className="shadow-lg bg-blue-600 dark:bg-blue-800 p-3 m-3 mt-6 h-[20rem]">
+                            <div className="shadow-lg bg-blue-600 dark:bg-blue-800 p-3 m-3 mt-6 h-[16rem]">
                                 <div className="text-3xl font-bold">Description.</div>
-                                <p className="text-lg md:text-2xl my-3 text-center md:text-left">
+                                <p className="text-lg md:text-xl my-3 text-center md:text-left">
                                     {subInfo[selectedSub].description}
                                 </p>
                             </div>
-                            <div className="h-auto md:h-40 flex flex-col justify-evenly space-y-4">
-                                {stats.map((stat) => (
-                                    <StatItem
-                                        key={`${selectedSub}-${stat.icon}`}
-                                        icon={stat.icon}
-                                        value={stat.value}
-                                        unit={stat.unit}
-                                        delay={stat.delay}
-                                    />
-                                ))}
+                            <div className="shadow-lg h-auto md:h-40 flex flex-col p-2 space-y-4 overflow-hidden">
+                                <h1 className="text-xl font-bold">Specification.</h1>
+                                <div className="text-xl">
+                                    {stats.map((stat) => (
+                                        <StatItem
+                                            key={`${selectedSub}-${stat.icon}`}
+                                            icon={stat.icon}
+                                            value={stat.value}
+                                            unit={stat.unit}
+                                            delay={stat.delay}
+                                        />
+                                    ))}
+                                </div>
                             </div>
                         </div>
                     </div>

@@ -103,7 +103,7 @@ export const Navbar = () => {
         >
 
           <NavLink href="/" className="mr-auto text-3xl font-semibold">Colorado Robosub</NavLink>
-          <div className="text-lg flex flex-row  md:w-1/2 lg:w-2/5 justify-around font-semibold">
+          <div className="text-lg flex flex-row  md:w-1/2 lg:w-1/2 justify-around font-semibold">
             <NavLink href="/about">About</NavLink>
             <NavLink href="/technology">Technology</NavLink>
             <NavLink href="/teams">Subteams</NavLink>

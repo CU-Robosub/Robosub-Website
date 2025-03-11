@@ -34,7 +34,7 @@ export default function Teams() {
                             we focus on gradually increasing responsibilities and building skills. This approach ensures the Software team is accessible to everyone interested in creating our subs' software.
                         </TeamCard>
 
-                        <TeamCard title="Mechanical" imgURL="/subteamImgs/softwareImg.jpg" left={true}>
+                        <TeamCard title="Mechanical" imgURL="/subteamImgs/mechanicalImg.jpg" left={true}>
                             The Mechanical Team at Colorado RoboSub designs, iterates, and integrates all the hardware components for our competition vehicles. This includes
                             everything from frames and hulls to complex systems like torpedo-firing mechanisms, all aimed at providing students with practical engineering experience.
                             While we strive for high-level performance and sophisticated solutions, our team is accessible to students of all abilities and commitment levels.
