@@ -15,7 +15,7 @@ const config: Config = {
     "./app/**/*.{js,ts,jsx,tsx,mdx}",
     "./src/**/*.{ts,tsx}", // Add this path if you want to include it
   ],
-  darkMode: "class",
+  darkMode: 'class',
   theme: {
     extend: {
    

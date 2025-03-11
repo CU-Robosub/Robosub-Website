@@ -4,6 +4,7 @@ import HeadshotCard from "../_components/headshotCard";
 import TeamCard from "../_components/teamCard";
 import { TracingBeam } from "../_components/tracing_beam";
 import { Metadata } from "next";
+
 export const metadata: Metadata = {
 
     title: 'Our Team',
@@ -14,7 +15,7 @@ export default function Teams() {
     return (
         <div>
             
-            <div className="w-full bg-blue-500">
+            <div className="w-full bg-blue-500 dark:bg-blue-900">
                 <div className="">
                     <h1 className="text-center text-6xl md:text-9xl font-bold py-9">Team Leads</h1>
                     <div className="flex flex-wrap flex-column w-full lg:w-4/5 mx-auto justify-evenly">
@@ -26,7 +27,7 @@ export default function Teams() {
                     </div>
                 </div>
                 <TracingBeam>
-                    <div className="w-full bg-white py-9">
+                    <div className="w-full bg-slate-50 dark:bg-gray-900 py-9">
                         <TeamCard title="Software" imgURL="/subteamImgs/softwareImg.jpg">
                             Our Software Team is responsible for enabling our subs to interpret sensory input and make autonomous decisions for task execution.
                             While the Software team tackles complex challenges, we welcome students of all experience levels! Whether you’re a beginner or an experienced developer,

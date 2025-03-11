@@ -12,33 +12,39 @@ import Footer from "./_components/footer";
 
 
 export const metadata: Metadata = {
-  title: 'Home',
-  description: "Colorado RoboSub is a team built around inclusion, comradery, and cooperation. As a completely student-run organization, Colorado RoboSub uniquely develops students' professional design capabilities while simultaneously creating an environment in which students are free to learn, fail, and try new things",
+    title: 'Home',
+    description: "Colorado RoboSub is a team built around inclusion, comradery, and cooperation. As a completely student-run organization, Colorado RoboSub uniquely develops students' professional design capabilities while simultaneously creating an environment in which students are free to learn, fail, and try new things",
 }
 
 export default function Home() {
     return (
+
         <>
-            <AuroraBackground>
+    
                 <div className="h-full w-full">
                     {/* Left Side Background */}
-                    <SlidingBackground/>
+                    <SlidingBackground />
 
                     {/* Right Side Image */}
                     <div className="hidden md:flex flex-row justify-center fixed right-0 h-full w-2/5">
-                        <ImagePopup/>
+                        <ImagePopup />
                     </div>
 
                     {/* Main Content */}
                     <div className="relative top-10 md:top-1/4 ml-6 md:ml-10 text-center md:text-left">
                         {/* Title Section */}
-                        <HomeTitle/>
+                        <HomeTitle />
                         <h2 className="text-2xl sm:text-3xl md:text-5xl h-12">
                             <Typerwriter stagger={40}>Autonomous Underwater Vehicles</Typerwriter>
                         </h2>
 
+                        <div className="md:hidden flex justify-center items-center my-4">
+                        <ImagePopup />
+
+                        </div>
+
                         {/* Menu Items */}
-                        <div className="flex ml-auto flex-col space-y-6 sm:space-y-8 my-10 md:mx-0 md:my-20">
+                        <div className="flex w-full items-center md:items-start md:w-auto md:ml-auto flex-col space-y-6 sm:space-y-8 my-10 md:mx-0 md:my-20">
                             <HomeMenuItem
                                 title={"About Us"}
                                 text={" - learn more about our team"}
@@ -60,9 +66,10 @@ export default function Home() {
                         </div>
                     </div>
 
-                   
+
                 </div>
-            </AuroraBackground>
+
         </>
+
     );
 }
