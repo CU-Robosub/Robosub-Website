@@ -11,6 +11,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 import { NavLink } from "./navLink";
 import Image from "next/image";
+import ThemeSwitcher from "./ThemeSwitcher";
 
 
 
@@ -34,6 +35,7 @@ export const Navbar = () => {
   function themeChange(e: any) {
     e.stopPropagation()
     document.documentElement.classList.toggle('dark')
+    
   }
 
 
@@ -109,10 +111,7 @@ export const Navbar = () => {
             <div className="flex-row items-center cursor-pointer py-1 px-4 bg-blue-500 dark:bg-blue-900 hover:bg-blue-400 duration-150 rounded-xl">
               Join
             </div>
-            <div onClick={themeChange} className="flex-row items-center cursor-pointer py-1 px-2 dark:bg-yellow-500 dark:hover:bg-yellow-600 bg-blue-800  hover:bg-blue-950 duration-150 rounded-xl">
-              <Image className="hidden dark:block" src="/svg/sun.svg" width={25} height={25} alt="sun" />
-              <Image className="dark:hidden" src="/svg/moon.svg" width={25} height={25} alt="sun" />
-            </div>
+            <ThemeSwitcher/>
           </div>
 
 

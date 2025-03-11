@@ -3,6 +3,7 @@ import localFont from "next/font/local";
 import "./globals.css";
 
 import { Navbar } from "./_components/navbar";
+import { ThemeProvider } from "next-themes";
 
 
 export const metadata: Metadata = {
@@ -73,10 +74,12 @@ export default function RootLayout({
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased font-inter dark:text-white bg-blue-50 dark:bg-gray-900`}
       >
-        <Navbar/>
-        {children}
-
+        <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <Navbar/>
+          {children}
+        </ThemeProvider>
       </body>
     </html>
+    
   );
 }
