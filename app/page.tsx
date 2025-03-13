@@ -12,7 +12,7 @@ import Footer from "./_components/footer";
 
 
 export const metadata: Metadata = {
-    title: 'Home',
+    title: 'Colorado Robosub | Home',
     description: "Colorado RoboSub is a team built around inclusion, comradery, and cooperation. As a completely student-run organization, Colorado RoboSub uniquely develops students' professional design capabilities while simultaneously creating an environment in which students are free to learn, fail, and try new things",
 }
 

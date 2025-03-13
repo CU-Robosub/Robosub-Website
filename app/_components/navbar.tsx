@@ -69,9 +69,8 @@ export const Navbar = () => {
           <div className="flex-row items-center text-center cursor-pointer  py-1 w-2/5 bg-blue-500 dark:bg-blue-900 hover:bg-blue-400 duration-150 rounded-xl">
             Join
           </div>
-          <div onClick={themeChange} className="flex-row w-2/5 items-center cursor-pointer py-1 px-2 dark:bg-yellow-500 dark:hover:bg-yellow-600 bg-blue-800  hover:bg-blue-950 duration-150 rounded-xl">
-            <Image className="hidden dark:block mx-auto" src="/svg/sun.svg" width={25} height={25} alt="sun" />
-            <Image className="dark:hidden mx-auto" src="/svg/moon.svg" width={25} height={25} alt="sun" />
+          <div className="w-2/5">
+            <ThemeSwitcher/>
           </div>
         </div>
         <div onClick={() => {setOpen(!open)}} className={`duration-150 cursor-pointer relative top-1 left-1 w-10 h-10 border-gray-400 dark:bg-gray-900 bg-white border-2 rounded-md ${open ? "-translate-x-44" : ""}`}>
@@ -103,7 +102,7 @@ export const Navbar = () => {
         >
 
           <NavLink href="/" className="mr-auto text-3xl font-semibold">Colorado Robosub</NavLink>
-          <div className="text-lg flex flex-row  md:w-1/2 lg:w-2/5 justify-around font-semibold">
+          <div className="text-lg flex flex-row  md:w-1/2 lg:w-1/2 justify-around font-semibold">
             <NavLink href="/about">About</NavLink>
             <NavLink href="/technology">Technology</NavLink>
             <NavLink href="/teams">Subteams</NavLink>
