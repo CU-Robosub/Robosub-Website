@@ -30,13 +30,17 @@ export const Navbar = () => {
       setBgcolor(true);
       setVisible(false);
     }
+
+  
   }, [pathname]);
 
   function themeChange(e: any) {
-    e.stopPropagation()
-    document.documentElement.classList.toggle('dark')
+    e.stopPropagation();
+    document.documentElement.classList.toggle('dark');
     
   }
+
+ 
 
 
   useMotionValueEvent(scrollYProgress, "change", (current) => {
@@ -59,8 +63,8 @@ export const Navbar = () => {
 
   return (
     <>
-      <div className="z-50 fixed md:hidden top-0 left-0 flex">
-        <div onClick={()=> setOpen(!open)} className={`h-[100vh] duration-150 bg-white dark:bg-gray-900 w-44 border-r-2 border-gray-400 flex flex-col p-1 gap-4 text-xl ${open ? "-translate-x-full" : ""}`}>
+      <div className={`z-50 duration-150 fixed md:hidden top-0 left-0 flex ${!open ? "-translate-x-44" : ""}`}>
+        <div onClick={()=> setOpen(!open)} className={`h-[100vh] duration-150 bg-white dark:bg-gray-900 w-44 border-r-2 border-gray-400 flex flex-col p-1 gap-4 text-xl`}>
           <NavLink href="/">Home</NavLink>
           <NavLink href="/about">About</NavLink>
           <NavLink href="/technology">Technology</NavLink>
@@ -73,8 +77,8 @@ export const Navbar = () => {
             <ThemeSwitcher/>
           </div>
         </div>
-        <div onClick={() => {setOpen(!open)}} className={`duration-150 cursor-pointer relative top-1 left-1 w-10 h-10 border-gray-400 dark:bg-gray-900 bg-white border-2 rounded-md ${open ? "-translate-x-44" : ""}`}>
-          <Image src="/svg/hamburger.svg" fill alt="menu_icon" className={`duration-150 ${open ? "": "-rotate-90"}`} />
+        <div onClick={() => {setOpen(!open)}} className={`duration-150 cursor-pointer relative top-1 left-1 w-10 h-10 border-gray-400 dark:bg-gray-900 bg-white border-2 rounded-md`}>
+          <Image src="/svg/hamburger.svg" fill alt="menu_icon" className={`duration-150 ${!open ? "": "-rotate-90"}`} />
         </div>
 
 
