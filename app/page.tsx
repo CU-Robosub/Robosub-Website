@@ -21,7 +21,7 @@ export default function Home() {
 
         <>
     
-                <div className="h-full w-full">
+                <div className="h-full w-full max-w-[100vw]">
                     {/* Left Side Background */}
                     <SlidingBackground />
 
@@ -38,7 +38,7 @@ export default function Home() {
                             <Typerwriter stagger={40}>Autonomous Underwater Vehicles</Typerwriter>
                         </h2>
 
-                        <div className="md:hidden flex justify-center items-center my-4">
+                        <div className="md:hidden flex justify-center items-center my-4 w-[90vw] overflow-hidden">
                         <ImagePopup />
 
                         </div>

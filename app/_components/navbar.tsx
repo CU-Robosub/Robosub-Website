@@ -97,7 +97,7 @@ export const Navbar = () => {
             duration: 0.2,
           }}
           className={cn(
-            "hidden md:flex w-full fixed top-0 inset-x-0 mx-auto pr-2 pl-8 py-2 z-50 align-middle",
+            "hidden md:flex w-auto justify-between fixed top-0 inset-x-0 pr-2 pl-8 py-2 z-50 mx-7 align-middle",
             {
               "bg-slate-50 dark:bg-gray-900 shadow-md": bgcolor
             }
@@ -105,13 +105,14 @@ export const Navbar = () => {
           )}
         >
 
-          <NavLink href="/" className="mr-auto text-3xl font-semibold">Colorado Robosub</NavLink>
-          <div className="text-lg flex flex-row  md:w-1/2 lg:w-1/2 justify-around font-semibold">
+
+          <NavLink href="/" className="md:text-xl lg:text-3xl font-semibold">Colorado Robosub</NavLink>
+          <div className="lg:text-lg md:text-base flex flex-row gap-4 w-auto justify-around align-middle font-semibold">
             <NavLink href="/about">About</NavLink>
             <NavLink href="/technology">Technology</NavLink>
             <NavLink href="/teams">Subteams</NavLink>
             <NavLink href="/sponsors">Sponsors</NavLink>
-            <div className="flex-row items-center cursor-pointer py-1 px-4 bg-blue-500 dark:bg-blue-900 hover:bg-blue-400 duration-150 rounded-xl">
+            <div className="flex-row items-center cursor-pointer py-1 px-4 bg-blue-500 dark:bg-blue-900 hover:bg-blue-400 dark:hover:bg-blue-950 duration-150 rounded-xl">
               Join
             </div>
             <ThemeSwitcher/>
