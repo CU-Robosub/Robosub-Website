@@ -19,7 +19,7 @@ export default function About() {
         <>
             <div className="-z-40 py-5 fixed top-0 sm:h-1/2 md:h-full w-full mx-auto flex flex-col items-center justify-center px-4 md:px-8 antialiased">
                 <h1 className="font-bold text-5xl sm:text-7xl md:text-[8rem] lg:text-[12rem] mb-8 md:mb-12 text-center z-10">
-                    About Us
+                    About <span className="bg-gradient-to-r from-yellow-500 to-yellow-600 bg-clip-text text-transparent">Us</span>
                 </h1>
                 <div className="flex flex-col gap-6 sm:flex-row justify-evenly items-start md:items-center w-full max-w-5xl flex-wrap">
                     <SpinLabel title="Founded" label="2020" />

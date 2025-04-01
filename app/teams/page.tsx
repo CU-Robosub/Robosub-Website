@@ -17,7 +17,7 @@ export default function Teams() {
             
             <div className="w-full bg-blue-500 dark:bg-blue-900">
                 <div className="">
-                    <h1 className="text-center text-6xl md:text-9xl font-bold py-9">Team Leads</h1>
+                    <h1 className="text-center text-6xl md:text-9xl font-bold py-9">Team <span className="bg-gradient-to-r from-yellow-500 to-yellow-600 bg-clip-text text-transparent">Leads</span></h1>
                     <div className="flex flex-wrap flex-column w-full lg:w-4/5 mx-auto justify-evenly">
                         <HeadshotCard image_url="/headshots/William_Hardee_headshot.jpg" name="William Hardee" title="Lead Software Developer" />
                         <HeadshotCard image_url="/headshots/Grant_Riddle_Headshot.jpeg" name="Grant Riddle" title="Lead Electrical Engineer" />

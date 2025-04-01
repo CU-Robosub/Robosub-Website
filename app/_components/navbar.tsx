@@ -97,7 +97,7 @@ export const Navbar = () => {
             duration: 0.2,
           }}
           className={cn(
-            "hidden md:flex w-auto justify-between fixed top-0 inset-x-0 pr-2 pl-8 py-2 z-50 mx-7 align-middle",
+            "hidden md:flex w-auto justify-between fixed top-0 inset-x-0 pr-2 pl-8 py-2 z-50 px-14 align-middle",
             {
               "bg-slate-50 dark:bg-gray-900 shadow-md": bgcolor
             }
@@ -106,8 +106,8 @@ export const Navbar = () => {
         >
 
 
-          <NavLink href="/" className="md:text-xl lg:text-3xl font-semibold">Colorado Robosub</NavLink>
-          <div className="lg:text-lg md:text-base flex flex-row gap-4 w-auto justify-around align-middle font-semibold">
+          <NavLink href="/" className="md:text-xl lg:text-3xl">Colorado Robosub</NavLink>
+          <div className="lg:text-lg md:text-base flex flex-row gap-5 w-auto justify-around align-middle">
             <NavLink href="/about">About</NavLink>
             <NavLink href="/technology">Technology</NavLink>
             <NavLink href="/teams">Subteams</NavLink>

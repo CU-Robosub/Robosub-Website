@@ -9,7 +9,7 @@ export default function HomeTitle() {
             animate={{ opacity: 1 }}
             transition={{ duration: 0.5 }}
         >
-            <h1 className="text-4xl sm:text-5xl md:text-9xl font-bold"><span className="text-yellow-500 dark:text-yellow-600">Colorado</span> Robosub</h1>
+            <h1 className="text-4xl sm:text-5xl md:text-9xl font-semibold"><span className="bg-gradient-to-r from-yellow-500 to-yellow-600 bg-clip-text text-transparent">Colorado</span> Robosub</h1>
         </motion.div>
     );
 }

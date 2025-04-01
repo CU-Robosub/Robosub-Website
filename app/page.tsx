@@ -26,7 +26,7 @@ export default function Home() {
                     <SlidingBackground />
 
                     {/* Right Side Image */}
-                    <div className="hidden md:flex flex-row justify-center fixed right-0 h-full w-2/5">
+                    <div className="hidden md:flex flex-row items-center justify-center fixed right-0 h-full w-2/5">
                         <ImagePopup />
                     </div>
 

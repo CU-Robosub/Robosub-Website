@@ -62,7 +62,7 @@ export default function HomeMenuItem({ title, text, delay, url }: HomeMenuItemPr
                 <span
                     onMouseEnter={handleMouseEnter}
                     onMouseLeave={handleMouseLeave}
-                    className="font-bold cursor-pointer text-2xl border-solid border-black dark:border-white border-2 h-14 text-center w-52 hover:text-3xl duration-75 flex items-center justify-center"
+                    className="cursor-pointer text-2xl border-solid border-black dark:border-white border-2 h-14 text-center w-52 hover:text-3xl duration-75 flex items-center justify-center"
                 >
                     {title}
                 </span>

@@ -106,7 +106,7 @@ export default function Technology() {
                             height={450}
                             alt={`${selectedSub}`}
                         />
-                        <div className="absolute top-1 left-1 text-3xl md:text-5xl font-semibold">{selectedSub.toUpperCase()}</div>
+                        <div className="absolute top-1 left-1 text-3xl md:text-5xl font-semibold"><span className="bg-gradient-to-r from-yellow-500 to-yellow-600 bg-clip-text text-transparent">{selectedSub.toUpperCase()}</span></div>
                         <div className="absolute w-full h-full top-0 left-0 overflow-hidden flex flex-col justify-center items-center">
                             <WavyBackground />
                         </div>

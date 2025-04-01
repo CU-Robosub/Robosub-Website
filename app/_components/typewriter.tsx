@@ -24,5 +24,5 @@ export default function Typerwriter({ children, stagger }: { children: string; s
     };
   }, [children, stagger]); 
 
-  return <span>{currentText}</span>; 
+  return <span>{currentText}_</span>; 
 }
