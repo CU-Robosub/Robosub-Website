@@ -43,7 +43,7 @@ export const metadata: Metadata = {
       {
         url: '/og-image.jpg',
         width: 1200,
-        height: 630,
+        height: 550,
         alt: 'Colorado Robosub Autonomous Underwater Vehicles'
       }
     ]
